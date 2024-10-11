@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Supabase",
+        "type": "shell",
+        "command": "npx supabase start",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
+      },
+      {
+        "label": "Start Dev Server",
+        "type": "shell",
+        "command": "npm run dev",
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new"
+        }
+      }
+    ]
+  }
