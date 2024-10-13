@@ -1,7 +1,9 @@
 export default function TicketsLayout({ children }) {
   return (
     <>
-      <main>{children}</main>
+      <section style={{ borderBottom: "1px solid gray" }}>
+        <main>{children}</main>
+      </section>
     </>
   );
 }
