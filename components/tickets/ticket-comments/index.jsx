@@ -39,7 +39,18 @@ export default function TicketComments() {
         <textarea ref={commentRef} placeholder="Add a comment" />
         <button type="submit">Add comment</button>
       </form>
-      <section>We have {comments.length} comments.</section>
+
+      <section>
+        {comments.map((comment) => (
+          <article key="{comment.date}">
+            <strong>{comment.author} </strong>
+            <small className="text-gray-400">
+              <time>{comment.date}</time>
+            </small>
+            <p>{comment.content}</p>
+          </article>
+        ))}
+      </section>
     </footer>
   );
 }
