@@ -2,7 +2,7 @@ const users = [
   {
     name: "Alice Ling",
     job: "Software Engineer",
-    isAvailable: false,
+    isAvailable: true,
   },
 ];
 
@@ -19,7 +19,8 @@ export default function UsersPage() {
         {users.map((user) => (
           <tr key={user.name}>
             <td>
-              {user.name} ({user.isAvailable ? "Available" : "Not available"})
+              {user.isAvailable ? "✔️ " : "X "}
+              {user.name}
             </td>
             <td>{user.job}</td>
           </tr>
