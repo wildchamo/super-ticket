@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
           href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         />
       </head>
-      <body className={`antialiased`}>{children}</body>
+      <body className={`container`}>{children}</body>
     </html>
   );
 }
