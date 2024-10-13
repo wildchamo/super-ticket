@@ -1,6 +1,10 @@
+"use client";
 import Link from "next/link";
+import { useRef } from "react";
 
 export const LoginForm = ({ isPasswordLogin }) => {
+  const emailInputRef = useRef(null);
+  const passwordInputRef = useRef(null);
   return (
     <article style={{ maxWidth: "480px", margin: "auto" }}>
       <header>Login</header>
@@ -9,7 +13,7 @@ export const LoginForm = ({ isPasswordLogin }) => {
         <label htmlFor="email">
           Email{" "}
           <input
-            // ref={emailInputRef}
+            ref={emailInputRef}
             type="email"
             id="email"
             name="email"
@@ -21,7 +25,7 @@ export const LoginForm = ({ isPasswordLogin }) => {
           <label htmlFor="password">
             Password{" "}
             <input
-              //   ref={passwordInputRef}
+              ref={passwordInputRef}
               type="password"
               id="password"
               name="password"
