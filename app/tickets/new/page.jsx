@@ -1,20 +1,23 @@
-const NewTicketPage = () => {
-  return (
-    <div>
-      <h1>Create a New Ticket</h1>
-      <form>
-        <div>
-          <label htmlFor="title">Title</label>
-          <input type="text" id="title" name="title" required />
-        </div>
-        <div>
-          <label htmlFor="description">Description</label>
-          <textarea id="description" name="description" required></textarea>
-        </div>
-        <button type="submit">Create Ticket</button>
-      </form>
-    </div>
-  );
-};
+"use client";
+import { useRef } from "react";
 
-export default NewTicketPage;
+export default function CreateTicket() {
+  const ticketTitleRef = useRef(null);
+  const ticketDescriptionRef = useRef(null);
+
+  return (
+    <article>
+      <h3>Create a new ticket</h3>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          alert("TODO: Add a new ticket");
+        }}
+      >
+        <input ref={ticketTitleRef} placeholder="Add a title" />
+        <textarea ref={ticketDescriptionRef} placeholder="Add a comment" />
+        <button type="submit">Create ticket now</button>
+      </form>
+    </article>
+  );
+}
