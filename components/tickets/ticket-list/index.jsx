@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function TicketList({ tickets }) {
   return (
     <table>
@@ -9,7 +11,9 @@ export function TicketList({ tickets }) {
       <tbody>
         {tickets.map((ticket) => (
           <tr key={ticket.id}>
-            <td>{ticket.id}</td>
+            <td>
+              <Link href={"tickets/details/" + ticket.id}>{ticket.id}</Link>
+            </td>
             <td>{ticket.title}</td>
             <td>{ticket.status}</td>
           </tr>
